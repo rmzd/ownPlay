@@ -1,0 +1,278 @@
+body{
+    background: rgb(12, 30, 61);
+    margin: 0;
+    width: 100%;
+    color: white;
+    font-family: 'Mulish', serif;!important;
+}
+img{
+    height: 100%;
+}
+.main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #456ea4;
+}
+h1{
+    color: white;
+    font-family: 'Mulish', serif;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 100px;
+}
+.nav{
+    width: 100%;
+    background: black;
+    min-height: 70px;
+    font-size: 20px;
+    font-family: 'Mulish', serif;
+    display: flex;
+    justify-content: center;
+
+}
+.nav-information{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.notime{
+    display: none;
+}
+.notime.active{
+    display: block;
+    font-size: 40px;
+}
+
+#calculation{
+    display: none;
+}
+#counter{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+}
+#buttonCountNumber{
+    display: none;
+}
+#buttonCountMinus{
+    background: linear-gradient(to left, #3636d7, #fd6363);
+    padding: 1px 100px;
+    border-radius: 10px;
+    border: #ecfaf7 solid 4px ;
+    font-family: 'Mulish', serif;
+    font-size: 25px;
+    color: white;
+}
+#buttonCountPlus{
+    font-family: 'Mulish', serif;
+    font-size: 25px;
+    background: linear-gradient(to left, #880909, #ffe649);
+    padding: 1px 100px;
+    border-radius: 10px;
+    border: #ffffff solid 4px ;
+    color: white;
+}
+#buttonCountPlus:hover {
+    background: linear-gradient(to left, #600b0b, #cec793);
+}
+.second-main{
+    display: none;
+}
+.second-main.active{
+    display: block;
+}
+.closed{
+    display: block;
+    opacity: 1;
+    transition: opacity 1s, visibility 0s;
+    width: 60vw;
+    position: absolute;
+}
+
+.closed.active{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 7s, visibility 7s;
+    position: absolute;
+
+}
+.open-picture.active img{
+    display: block;
+    opacity: 1;
+    transition: opacity 7s, visibility 7s;
+}
+.open-picture img{
+    width: 60vw;
+
+}
+video{
+    display: none;
+}
+.interesting.no{
+    display: none;
+}
+.interesting img{
+
+}
+.interesting {
+    display: flex;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 600px;
+    z-index: 100;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.interesting.active img{
+    display: none;
+
+}
+marquee{
+    margin-left: -702px;
+    background: black;
+    color: #4d8820;
+    margin-top: 300px;
+    position: absolute;
+    z-index: 2;
+    width: 760px;
+    padding:20px ;
+    display: none;
+ }
+.money {
+    color: #4d8820;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.money span{
+    color: white;
+    margin-right: 20px;
+}
+.chat{
+     position: absolute;
+     right: 0;
+     top: 70px;
+     font-size: 20px;
+     width: 300px;
+     background: #9d8f8f;
+     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+ }
+.chat.active{
+    height: 93%;
+}
+.chat-info{
+    display: flex;
+    align-items: center;
+    margin: 15px 20px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.chat-info svg {
+   fill: white;
+}
+.chat-input{
+    display: none;
+}
+.chat-input.active{
+     display: block;
+ }
+.chat-input textarea{
+    height: 28px;
+    width: 280px;
+    margin-bottom: 20px;
+}
+.chat-info-svg.active{
+    transform: rotate(180deg);
+
+}
+.cl{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+.smth{
+    margin-left: -30px;
+    opacity: 0;
+    z-index: -1;
+    transition: 1s; /*Скорость перехода состояния элемента*/
+    animation: show 7s 1;
+}
+.smth.visible{
+    z-index: 10;
+ /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+}
+@keyframes show{
+    0%{
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+.smth.active{
+    opacity: 0;
+    z-index: -1;
+    animation: unshow 7s 1;
+}
+@keyframes unshow{
+    0%{
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+.nnt-int{
+    display: none;
+}
+
+.clear{
+    clear:both;
+}
+
+.nnt-int.active{
+    display: block;
+    position: relative;
+
+    transition: left 5s linear;
+}
+.cost{
+    display: none;
+}
+.cost.active{
+    display: block;
+}
+
+.no{
+    color: #9d8f8f;
+    position: absolute;
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+    background: white;
+    margin-top: 350px;
+}
+.not-interesting{
+    font-size: 20px;
+    color: #4d8820;
+}
+.buy.no{
+     display: none;
+ }
